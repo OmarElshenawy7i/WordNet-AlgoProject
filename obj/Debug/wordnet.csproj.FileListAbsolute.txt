@@ -1,0 +1,7 @@
+D:\Faculty\3rd_year\Algorithm\wordnet\bin\Debug\wordnet.exe.config
+D:\Faculty\3rd_year\Algorithm\wordnet\bin\Debug\wordnet.exe
+D:\Faculty\3rd_year\Algorithm\wordnet\bin\Debug\wordnet.pdb
+D:\Faculty\3rd_year\Algorithm\wordnet\obj\Debug\wordnet.csproj.AssemblyReference.cache
+D:\Faculty\3rd_year\Algorithm\wordnet\obj\Debug\wordnet.csproj.CoreCompileInputs.cache
+D:\Faculty\3rd_year\Algorithm\wordnet\obj\Debug\wordnet.exe
+D:\Faculty\3rd_year\Algorithm\wordnet\obj\Debug\wordnet.pdb
