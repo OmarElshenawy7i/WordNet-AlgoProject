@@ -223,7 +223,53 @@ namespace wordnet
         {
             return Id[node];
         }
-        
+        public static Tuple<int, int> get_PD(int id1, int id2, List<int> d1, List<int> d2, List<bool> local1, List<bool> local2)
+        {
+            BFS(id1, d1, local1, null);
+            int commonParent = BFS(id2, d2, local2, local1);
+            return Tuple.Create(commonParent, d1[commonParent] + d2[commonParent]);
+        }
+public static int BFS(int start, List<int> d, List<bool> local, List<bool> general)
+        {
+            Queue<int> v = new Queue<int>();
+            d[start] = 0;
+            local[start] = true;
+            if (parents[start] == null)
+            {
+                d[start] = 0;
+                return start;
+            }
+            else
+            {
+                v.Enqueue(start);
+                while (v.Count > 0)
+                {
+                    int a = v.Dequeue();
+                    if (general != null)
+                    {
+                        if (general[a] == true)
+                        {
+                            return a;
+                        }
+                    }
+                    if (parents[a] == null) { }
+                    else
+                    {
+                        foreach (int x in parents[a])
+                        {
+                            if (local[x] == false)
+                            {
+                                v.Enqueue(x);
+                                local[x] = true;
+                                d[x] = d[a] + 1;
+                            }
+                        }
+                    }
+                }
+                return 0;
+            }
+        }
+
     }
 }
     
